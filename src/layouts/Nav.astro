@@ -1,0 +1,23 @@
+---
+import Clock from '../components/Nav/Clock.svelte';
+import Links from '../components/Nav/Links.astro';
+import Location from '../components/Nav/Location.astro';
+import Wrapper from './Wrapper.astro';
+---
+
+<nav>
+   <Wrapper>
+      <div class="grid grid-cols-1 sm:grid-cols-3">
+         <div class="hidden sm:block sm:col-span-1"></div>
+         <div
+            class="col-span-1 sm:col-span-2 pb-10 flex items-start justify-between"
+         >
+            <Links />
+            <div class="flex flex-col gap-y-2 items-end">
+               <Clock client:only="svelte" />
+               <Location />
+            </div>
+         </div>
+      </div>
+   </Wrapper>
+</nav>

@@ -1,0 +1,47 @@
+---
+import '@fontsource/anonymous-pro';
+import '@fontsource/space-grotesk/300.css';
+import '@fontsource/space-grotesk/400.css';
+import '@fontsource/space-grotesk/500.css';
+
+import { SEO } from 'astro-seo';
+import type { SEOProps } from '../types';
+
+export type Props = SEOProps;
+
+const { ...props } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width" />
+      <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+      <meta name="generator" content={Astro.generator} />
+      <SEO {...props} />
+      <link
+         rel="preload"
+         fetchpriority="high"
+         as="image"
+         href="/works/openveranda.webp"
+         type="image/webp"
+      />
+      <link rel="sitemap" href="/sitemap-index.xml" />
+   </head>
+   <body
+      class="font-space pt-6 sm:pt-10 px-6 sm:px-10 pb-24 selection:bg-neutral-800 selection:text-white text-fg bg-lines bg-bg_main antialiased h-full min-h-screen w-full"
+   >
+      <slot />
+      <style is:global>
+         .bg-lines {
+            background-image: repeating-linear-gradient(
+               -75deg,
+               rgba(20, 20, 20, 1),
+               rgba(20, 20, 20, 0.93) 50px,
+               rgba(20, 20, 20, 0.95) 50px
+            );
+         }
+      </style>
+   </body>
+</html>

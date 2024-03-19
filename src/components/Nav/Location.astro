@@ -1,0 +1,18 @@
+---
+import { Image } from 'astro:assets';
+import Flag from '../../../public/flag.jpg';
+---
+
+<div class="inline-flex items-center">
+   <Image
+      src={Flag}
+      alt="Willemstad, Curaçao Flag"
+      class="h-3 lg:h-4 w-auto rounded"
+   />
+   <p class="ml-3 font-light text-sm lg:text-base">
+      <span class="text-neutral-400">Willemstad</span>, <span
+         class="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-white to-yellow-500"
+         >Curaçao</span
+      >
+   </p>
+</div>

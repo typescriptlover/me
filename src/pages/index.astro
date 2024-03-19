@@ -1,0 +1,20 @@
+---
+import Beam from '../components/Beam.astro';
+import Layout from '../layouts/Layout.astro';
+import Main from '../layouts/Main.astro';
+import Nav from '../layouts/Nav.astro';
+
+import Header from '../components/Home/Header.astro';
+import Works from '../components/Home/Works/Works';
+
+import SEO from '../seo';
+---
+
+<Layout {...SEO()}>
+   <Beam />
+   <Nav />
+   <Main className="w-full mt-16">
+      <Header />
+      <Works client:only="react" />
+   </Main>
+</Layout>
