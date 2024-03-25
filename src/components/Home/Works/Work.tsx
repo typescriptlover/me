@@ -27,11 +27,12 @@ const Work: FC<Props & { index: number }> = ({
    const scale = useTransform(
       scrollY,
       [
-         top > 0 ? top - height - 150 : 0,
+         top > 0 ? top - height - 125 : 0,
          top && height > 0 ? top - height / 2 : 0,
-         top > 0 ? top + height / 2 + 150 : 0,
+         top && height > 0 ? top - height / 2 + 125 : 0,
+         top > 0 ? top + height / 2 + 125 : 0,
       ],
-      [index === 0 ? 1.0 : 0.9, 1.0, 0.9]
+      [index === 0 ? 1.0 : 0.9, 1.0, 1.0, 0.9]
    );
 
    return (
