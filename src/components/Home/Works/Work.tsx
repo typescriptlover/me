@@ -1,5 +1,5 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { useRef, type FC } from 'react';
+import { useCallback, useRef, useState, type FC } from 'react';
 
 import type { WorkData } from '../../../types';
 
@@ -13,14 +13,23 @@ const Work: FC<Props & { index: number }> = ({
    styling,
 }) => {
    const ref = useRef<HTMLDivElement>(null);
+   const [top, setTop] = useState<number>(0);
+   const [height, setHeight] = useState<number>(0);
    const { scrollY } = useScroll();
+
+   const updateValues = useCallback(() => {
+      if (ref.current) {
+         setTop(ref.current.offsetTop);
+         setHeight(ref.current.clientHeight);
+      }
+   }, [ref]);
 
    const scale = useTransform(
       scrollY,
       [
-         400 * index,
-         400 * (index + 1) + 350 * index,
-         400 * (index + 2) + 350 * (index + 1),
+         top > 0 ? top - height : 0,
+         top && height > 0 ? top - height / 2 : 0,
+         top > 0 ? top + height / 2 : 0,
       ],
       [index === 0 ? 1.0 : 0.9, 1.0, 0.9]
    );
@@ -34,6 +43,7 @@ const Work: FC<Props & { index: number }> = ({
          <img
             src={`/works/${image}`}
             alt={`${name}'s website`}
+            onLoad={updateValues}
             className="w-full rounded-2xl md:rounded-3xl"
          />
          <div className="mt-4 flex items-center justify-between">
