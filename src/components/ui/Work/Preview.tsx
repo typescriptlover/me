@@ -36,6 +36,7 @@ const WorkPreview: FC<Props> = ({
             quality={100}
             placeholder="blur"
             priority={priority}
+            loading={priority ? undefined : 'lazy'}
          />
       </div>
    );

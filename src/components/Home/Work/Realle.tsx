@@ -3,9 +3,9 @@ import WorkPreview from '@/components/ui/Work/Preview';
 import WorkPreviewContainer from '@/components/ui/Work/PreviewContainer';
 
 import CTA from '@/components/Assets/Realle/CTA.png';
-import Landing from '@/components/Assets/Realle/Landing.png';
+import Landing from '@/components/Assets/Realle/Landing.webp';
 import RealleLogo from '@/components/Assets/Realle/Logo';
-import Make from '@/components/Assets/Realle/Make.png';
+import Make from '@/components/Assets/Realle/Make.webp';
 import Safe from '@/components/Assets/Realle/Safe.png';
 
 const Realle = () => {
