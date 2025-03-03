@@ -1,12 +1,5 @@
 import type { NextConfig } from 'next';
 
-const nextConfig: NextConfig = {
-   /* config options here */
-   output: 'export',
-   images: {
-      loader: 'custom',
-      loaderFile: './src/lib/imageLoader.ts',
-   },
-};
+const nextConfig: NextConfig = {};
 
 export default nextConfig;
