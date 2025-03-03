@@ -33,7 +33,7 @@ const WorkPreview: FC<Props> = ({
                '!rounded-12',
                className ? className : '!w-full !h-auto'
             )}
-            quality={85}
+            quality={100}
             placeholder="blur"
             priority={priority}
          />
