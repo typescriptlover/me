@@ -2,7 +2,7 @@ import WorkHeader from '@/components/ui/Work/Header';
 import WorkPreview from '@/components/ui/Work/Preview';
 import WorkPreviewContainer from '@/components/ui/Work/PreviewContainer';
 
-import Countless from '@/components/Assets/Bleed/Countless.png';
+import Countless from '@/components/Assets/Bleed/Countless.webp';
 import CTA from '@/components/Assets/Bleed/CTA.png';
 import Landing from '@/components/Assets/Bleed/Landing.png';
 import ModerationSecurity from '@/components/Assets/Bleed/ModerationSecurity.png';
