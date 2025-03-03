@@ -34,7 +34,7 @@ const WorkPreview: FC<Props> = ({
                className ? className : '!w-full !h-auto'
             )}
             sizes="100vw"
-            quality={100}
+            quality={90}
             placeholder="blur"
             priority={priority}
          />
