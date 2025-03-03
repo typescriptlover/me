@@ -12,9 +12,13 @@ const Bleed = () => {
    return (
       <div>
          <WorkHeader
-            Logo={() => <p>Bleed</p>}
+            Logo={() => (
+               <p className="font-semibold inline-block text-19 text-transparent bg-clip-text bg-gradient-to-br from-0% via-55% to-75% from-[#92C8D2] via-[#202C2F] to-[#4B676C]">
+                  Bleed
+               </p>
+            )}
             description="All-in-one app for over 20+ million users worldwide."
-            logoClassName="w-60 invert"
+            notSVG
          />
          <WorkPreviewContainer>
             <WorkPreview priority first src={Landing} alt="bleed landing" />
